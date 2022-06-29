@@ -1,16 +1,12 @@
 package com.admodev.flockit.auth;
 
 import com.admodev.flockit.Constants;
+import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+@AllArgsConstructor
 public class UserService {
     private final Constants constants;
-
-    protected UserService(Constants constants, UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
-        this.constants = constants;
-        this.userRepository = userRepository;
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-    }
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
